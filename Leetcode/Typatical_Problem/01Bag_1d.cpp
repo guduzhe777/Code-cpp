@@ -20,12 +20,21 @@ int main()
     int j = 0;//代表不同容量
     int i = 0;//代表不同物品
     scanf("%d",&n);
-    for(i = 0;i<n;i++)
+    scanf("%d",&bag_capa);
+    // for(i = 0;i<n;i++)   //体积和价值一起输入
+    // {
+    //     scanf("%d",weight+i);
+    //     scanf("%d",value+i);
+    // }
+     for(i = 0;i<n;i++)   //体积
     {
         scanf("%d",weight+i);
-        scanf("%d",value+i);
     }
-    scanf("%d",&bag_capa);
+     for(i = 0;i<n;i++)   //价值
+    {
+      scanf("%d",value+i);
+    }
+    
     //初始化：
    for(j = 0;j<=bag_capa;j++)
     {
