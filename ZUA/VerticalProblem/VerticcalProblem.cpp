@@ -76,11 +76,31 @@ void test0()
     }
 }
 
+void test1()
+{
+    int m,n;
+    while(cin >> n>>m)//先输入个头
+    {
+        int sign = 0;//在寻找的过程开始未找到
+        for(int x = 0;x<=n;x++)//鸡子的数量 寻找的过程
+        {
+            if(4 * n-2 * x == m)
+            {
+                sign = 1;//找到了
+                cout << x << " "<< n - x<<endl;
+            }
+        }
+        if(!sign)
+        {
+            cout << "No answer"<<endl;
+        }
+    }
 
-
+}
 int main()
 {   
-    test0();
+    //test0();
+    test1();
     return 0;
 }
 //思路一，方法一:用数组实现

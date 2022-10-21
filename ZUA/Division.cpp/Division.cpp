@@ -38,11 +38,14 @@ void test0()
                 {
                     if (arr[t] == arr[k])
                     {
-                        sign = 0; //说明存在相等  那么这一组不行 开新的
+                        sign = 0; //说明存在相等  那么这一组不行 开新的 标记+退出一次  标记再退出一次
                         break;
                     }
                 }
             }
+            //标记位常用于  后续需要 判断条件要不要成立的情况下
+            // sign = 1 那么全部不相等
+            // 0有相等的
             if (sign) //全不相等那么输出  不然不输出
             {
                 me = 1;
@@ -78,7 +81,8 @@ int dis(long long arr[], int len)
     }
     return 1;
 }
-int main()
+//用数组储存数字  双指针判断每个元素都不相等
+void test3()
 {
     long long arr[9];
     long long i;
@@ -104,5 +108,44 @@ int main()
             printf("\n");
         }
     }
+}
+
+void test1()
+{
+    //产生数字 参与计算  限制条件
+    int cnt; //解的个数  每次输入一个数字后 都是解的数量为0
+    long long x, y, k, i;
+    long long a[1001], b[1001]; //创建保存 因为次数原因不能每次都输出 计算完才可以输出
+    while (cin >> k)
+    {
+        cnt = 0; //解的个数  每次输入一个数字后 都是解的数量为0
+        i = 0;
+        for (y = 1; y < 10000; y++)
+        {
+            for (x = y; x < 10000; x++)
+            {
+                if (k * (x + y) == x * y)
+                {
+                    cnt++;
+                    a[i] = x;
+                    b[i] = y;
+                    i++; //找到了那么保存把
+                }
+            }
+        }
+        cout << cnt <<endl;
+        for (int t = 0; t < i; t++)
+        {
+            cout << "1/" <<k << " = "
+                 << "1/" << a[t] << " + "
+                 << "1/" << b[t] << endl;
+        }
+    }
+}
+int main()
+{
+    // test3();
+    test1();
+
     return 0;
 }
