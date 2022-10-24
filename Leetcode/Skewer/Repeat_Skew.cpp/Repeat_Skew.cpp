@@ -28,6 +28,8 @@ public:
         i = 0,j = 1;
         int s_len = s.length();
         int ss_len = ss.length();
+
+        
         while((i<s_len)&&(j<ss_len-1))
         {
             if((i == -1)||(s[i] == ss[j]))
