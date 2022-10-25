@@ -24,6 +24,10 @@ int main()
         edge[m][n] = len;//保存长度        
     }
     //双循环遍历边长度  存在长度 比较
+    int bg,ed;
+    cin>>bg>>ed;
+    cost[bg] = 0;
+
     for(int i = 0;i<Edge;i++)
     {
         for(int j = 0;j<Edge;j++)
