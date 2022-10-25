@@ -41,13 +41,13 @@ int main()
     int n, k;
     solution s;
     cin >> n;
-    int arr[n][n], tem[n][n];
+    int arr[n][n], tem[n][n],rest[n][n];
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
             cin >> arr[i][j];
-            tem[i][n] = arr[i][j];
+            tem[i][j] = arr[i][j];
         }
     }
 
@@ -59,7 +59,7 @@ int main()
     //快速幂计算 10 9 快速乘法计算 Aij
     //计算a ^ k 保存在arr之中
     int i = 0,j = 0;
-    ll ret_matix,ret_pow;
+    ll ret_matix = 0,ret_pow;
     ret_pow = s.fast_power(10,9) + 7;
     while(i<n)
     {
@@ -67,10 +67,11 @@ int main()
         {
             for(int t = 0;t<n;t++)
             {
-                ret_matix = s.fast_mul(arr[i][t],tem[t][j],ret_pow);
+                // ret_matix = s.fast_mul(arr[i][t],tem[t][j],ret_pow);
+                ret_matix += arr[i][t] * tem[t][j];
             }
-            arr[i][j] =ret_matix;
-            
+            rest[i][j] =ret_matix;
+            ret_matix = 0;    
             ++j;
         }
         j = 0;
@@ -80,7 +81,7 @@ int main()
     {
         for (int j = 0; j < n; j++)
         {
-            cout<<arr[i][j]<<" ";
+            cout<<rest[i][j]<<" ";
         }
     }
     return 0;
