@@ -1,8 +1,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-using v1 = vector<int>;
-using vv1 = vector<v1>;
+using vi = vector<int>;
+using vv1 = vector<vi>;
 
 const int INF = 0x3f3f3f3f;
 //输入图的点 边数量
@@ -10,8 +10,8 @@ const int INF = 0x3f3f3f3f;
 // dfs 获取终点 v 到起点最短距离
 //思路 到 v点最短  1.判断j
 vv1 G;
-v1 cost;       //最短距离
-v1 path;       //该点的最短的上一个顶点为：
+vi cost;       //最短距离
+vi path;       //该点的最短的上一个顶点为：
 int vex, edge; //点  边
 int dfs(int v) //得到到这个点的最短距离
 {

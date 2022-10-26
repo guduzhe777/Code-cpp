@@ -2,11 +2,11 @@
 #include <vector>
 const int INF = 0x3f3f3f3f;
 using namespace std;
-using v1 = vector<int>;
-using vv1 = vector<v1>;
-v1 cost; //最短距离
+using vi = vector<int>;
+using vv1 = vector<vi>;
+vi cost; //最短距离
 vv1 G;   //是否有边
-v1 path; //该点的上一个
+vi path; //该点的上一个
 int vex, edge;
 int dfs(int v)
 {
