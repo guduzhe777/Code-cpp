@@ -14,7 +14,9 @@
 
 2. 顺序  用数组   下标i 那么子树2 * i + 1 2 * i + 2就是i的 左右子树
 
-#### 遍历：
+#### 遍历： 总的是基于递归原理---栈 所以模拟栈  
+
+无非放入栈的方式不同  取出来的方式不同
 
 中序：
 
@@ -87,7 +89,7 @@
 
       1. ~~~
          		TreeNode* Nodeptr = st.top();//处理的当前树
-         		st.pop();//取出来需要处理的树
+            		st.pop();//取出来需要处理的树
                  arr.push_back(Nodeptr->val);//保存
          ~~~
 
@@ -236,7 +238,7 @@ public:
 2. 到达空 错  应该是  一直尝试 变成中节点  后面带有NULL标记 进行输出
 
    1. ~~~
-       	else(ifst.top() == NULL)			st.pop();
+       			  else(ifst.top() == NULL)			st.pop();
                       arr.push_back(st.top()->val);//保存中间
                       st.pop();//保存 然后 pop 
       ~~~
