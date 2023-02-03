@@ -35,7 +35,7 @@ int main()
     // }
     for(i = 0;num != 0;i++)     //转换十进制
     {
-        sum += num % 10 * pow(9,i);
+        sum += num % 10 * pow(Old_Base,i);      //自身权重
         num /= 10;
     }
     i = 0;

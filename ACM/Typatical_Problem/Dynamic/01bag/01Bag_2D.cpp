@@ -2,13 +2,13 @@
 
 using namespace std;
 
-class OT_Bag
-{
+// class OT_Bag
+// {
 
-    void OT_Bag_Easy()
-    {
-    }
-};
+//     void OT_Bag_Easy()
+//     {
+//     }
+// };
 int max(int x,int y)
 {
     return x>y?x:y;
@@ -29,7 +29,11 @@ int main()
     }
     scanf("%d", &bag_Capa);     //容量
     //初始化
-
+    //dp数组中每个元素都代表 i个物品  j容量下 装取最大价值为多少。
+    //通过前面情况最大价值 推 后续情况 最大价值：
+    //dp[i][j] = max(dp[i-1][j],value[i]+dp[i-1][j-weight[i]]);
+    //恰好配合 该物品要不要拿
+    //最后输出  n个物品 bag 容量下 能取的最大价值
     for (int j = weight[0]; j <= bag_Capa; j++) {
          dp[0][j] = value[0];
     }
