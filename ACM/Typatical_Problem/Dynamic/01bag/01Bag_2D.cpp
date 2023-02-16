@@ -22,12 +22,12 @@ int main()
     
     int value[n] = {0};
     int weight[n] = {0};
+    scanf("%d", &bag_Capa);     //容量
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &weight[i]); //物品质量
         scanf("%d", &value[i]);  //物品价值
     }
-    scanf("%d", &bag_Capa);     //容量
     //初始化
     //dp数组中每个元素都代表 i个物品  j容量下 装取最大价值为多少。
     //通过前面情况最大价值 推 后续情况 最大价值：
