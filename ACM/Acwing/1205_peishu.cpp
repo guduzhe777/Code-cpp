@@ -2,7 +2,7 @@
 using namespace std;
 int ans_p = 0,ans_q = 0;
 /* 我想说  一直做同一件事情 用递归  条件需要限制！！！*/
-bool dfs(int m,int p,int q)
+bool dfs(int m,int p,int q)//m 一直 减 p q 直到m 为0  ----看p q是否能组成m
 {
     if(!m) return true;
     if(m>=p&&dfs(m - p,p,q)) {
