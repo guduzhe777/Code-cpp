@@ -21,7 +21,7 @@ int cacl(int l,int r)
     for(int i = l;i<=r;i++)
     {
         // res += f[i] * pow(10,r-i);
-        res = res * 10 + f[i];
+        res = res * 10 + f[i];//数组变成数字
     }
     return res;
 }
@@ -64,6 +64,7 @@ void obs(int x)
 int main()
 {
     scanf("%d",&n);
+    // cin>>n;
     obs(1);
     printf("%d",cnt);
     return 0;

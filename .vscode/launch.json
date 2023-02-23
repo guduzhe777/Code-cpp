@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Demo1",
+            "request": "launch",
+            "mainClass": "Demo1",
+            "projectName": "Code-cpp_57f6b15"
+        },
+        {
             "name": "g++.exe - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
