@@ -53,14 +53,14 @@ int main()
             }
 
             //第二行乃至以后都被第一行约束
-            for (int i = 0; i < 4; i++)
+            for (int k = 0; k < 4; k++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    if (w[i][j] == '0')
+                    if (w[k][j] == '0')
                     {
                         step++;
-                        turn(i + 1, j);
+                        turn(k + 1, j);
                     }
                 }
             }
