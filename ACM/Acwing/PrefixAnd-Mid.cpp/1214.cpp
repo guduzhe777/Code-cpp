@@ -5,7 +5,7 @@ using namespace std;
 const int N = 1010;
 using ll = long long;
 ll n,s,a,b;
-ll max = 1e9;
+ll max1 = 1e9;
 ll f[N];
 ll ans = 0;
 ll sum = 0;
@@ -16,6 +16,12 @@ void def(int x)//寻路放元素
         if(sum == s)    ans++;
         
         sum = 0;
+    }
+    
+    for(ll i = -max1;i<=max1;i++)
+    {
+        def(i);
+
     }
 }
 int main()
