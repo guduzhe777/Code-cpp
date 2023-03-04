@@ -42,6 +42,7 @@ int main()
                 ans++;
                 continue;//若i == j  j++
             }
+            //确定区间 每次都对整个区间进行判断 是否连续
             for (int k = i; k < j; k++)
             {
 
