@@ -38,7 +38,7 @@ int main()
                 }
                 if (k == 5) //最后一个也是
                 {
-                    cout << "Win " << i << " " << j;
+                    cout << "Win " << j << " " << i;
                     return 0;
                 }
             }
@@ -54,7 +54,7 @@ int main()
                 }
                 if (k == 5) //最后一个也是
                 {
-                    cout << "Win " << i << " " << j;
+                    cout << "Win " << j << " " << i;
                     return 0;
                 }
             }
@@ -71,7 +71,7 @@ int main()
                 }
                 if (k == 5) //最后一个也是
                 {
-                    cout << "Win " << i << " " << j;
+                    cout << "Win " << j << " " << i;
                     return 0;
                 }
             }
