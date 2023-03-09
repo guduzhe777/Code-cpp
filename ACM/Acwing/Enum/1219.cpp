@@ -5,7 +5,7 @@ int m,n,w;
 //距离不依靠
 int obs(int x)
 {
-    x>0?x:-x;
+   return  x>0?x:-x;
 }
 int main()
 {

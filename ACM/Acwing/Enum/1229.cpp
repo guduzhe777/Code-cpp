@@ -59,8 +59,7 @@ int main()
                 a == day&&b == mouth&& c == year % 100                                        //日/月/年
             )
             {
-                printf("%d-%-02d-%-02d\n",year,mouth,day);//负号代表后面补0
-                //printf("%d-%02d-%02d\n",year,mouth,day);//对应 那么 输出
+                printf("%d-%02d-%02d\n",year,mouth,day);//对应 那么 输出
             }
         }
     }
