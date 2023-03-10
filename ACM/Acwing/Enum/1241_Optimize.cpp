@@ -27,9 +27,10 @@ int main()
     }
     //输入完订单号
     sort(order,order+m);//订单号排序
-    for(int i = 0;i<m;)//穷举方案数 
+    //id  含义是这个  商家  和 i 
+    for(int i = 0;i<m;)//穷举方案数   //用j 更新i 更新方案后续 
     {
-        int cnt = 0,j = i;//得到 订单数量  看某个时刻 某个订单 的 结束地点
+        int cnt = 0,j = i;//得到 订单数量  看某个时刻 某个订单 的 结束地点   
         int t = order[i].first;//对于 有订单的时刻  处理 t时刻之前的！！！
         int id = order[i].second;//保存这个编号 对这个编号 进行处理
         while(order[i] == order[j]&&j<m) j++;
@@ -54,6 +55,8 @@ int main()
         //先减法 有含0时候 不会减法  but  先加法  会把数字减去  
         //先减法  因为  我在处理的时候  他就是 0 然后 上一个处理时间为 0的时候  才符合逻辑！！！ 
        //更新last  与  sorce +2 是一起的 t时刻 进行加法 与 更新last 因为逻辑为 先 加法 然后才更新last！！！ 
+       //只更新方案中的商家
+       //对于 不是方案中的 后续集体更新即可
         sorce[id] += cnt * 2;//编号的得分 为  +cnt  * 2 
         if(sorce[id]>5) st[id] = true;
         
