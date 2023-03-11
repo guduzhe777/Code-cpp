@@ -8,7 +8,7 @@ using ll = long long;
 int tem[N];
 ll merge(int l,int r)//计算逆序对数量 最多 5 * 10^ 9 （n n -1 n- 2 ..全都是逆序对 ）
 {
-    if(r>=l) return 0;
+    if(l>=r) return 0;
     int mid = (r - l)/2 + l;
     
     ll res = merge(l,mid) + merge(mid+1,r);
