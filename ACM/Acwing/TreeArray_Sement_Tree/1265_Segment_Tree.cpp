@@ -41,7 +41,8 @@ int query(int u,int l,int r)//以某个点开始  求 左右区间的和
 	// if(l<=mid)	sum += query(u>>1,l,r);//为什么 到 r 而不是 mid 
 	// if(r>mid) sum += query(u>>1|1,l,r);//我认为这俩一样的 r 的时候mid 也是 可以直接返回
 	//放到孩子中
-    if(l<=mid)	sum += query(u<<1,l,r);//为什么 到 r 而不是 mid 
+    if(l<=mid)	sum += query(u<<1,l,r);//为什么 到 r 而不是 mid 是 l  r包含区域  r 可能 大于 mid 这时候 当然可以 左边求完 右边再求
+										//  小于 mid  选择区域过大
 	if(r>mid) sum += query(u<<1|1,l,r);//我认为这俩一样的 r 的时候mid 也是 可以直接返回
     return sum;//两区域和求取完毕
 }
