@@ -25,7 +25,7 @@ int query(int x)//求和
 
 void add(int x,int v)
 {
-    for(int i = x;i<=n;i++)
+    for(int i = x;i<N;i += lowbit(i))
     {
         tr[i] += v;
     }
@@ -45,7 +45,7 @@ int main()
         sum[i] += query(N-1) - query(h[i]);//小于等于N - 1数量
         
     }
-    memset(tr,0,N);
+    memset(tr,0,sizeof(tr));
     for(int i = n;i>0;i--)
     {
         add(h[i],1);//等于 h[i] 数量加一     
