@@ -26,9 +26,9 @@ int main()
 
         }else{
             //访问列  c列  c += m  对于 c列 向下 都 迭代加 m
-            for(int i = c,j = 1;j<n;i += m,j++) //2行 最多加 1 次  n行加n - 1次  j起记录次数作用
+            for(int i = c,j = 1;j<=n;i += m,j++) //2行 最多加 1 次  n行加n - 1次  j起记录次数作用  j 为1 时候 + 0个m
             {
-                state[i] = true;//
+                state[i] = true;//  j最后为n 加n - 1个m 到第n行
             }
         }
     }

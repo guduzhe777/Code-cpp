@@ -1,24 +1,47 @@
 #include<bits/stdc++.h>
+
 using namespace std;
-const int N = 128;
-int word[N];
+//字符与次数 保存在 二元组
+//对输入字符数量++
+//输出
+const int N = 1011;
+int sign;
+typedef pair <char,int> PII;
+PII ans[N];
 int main()
 {
     string s;
-    getline(cin, s);
-    for (char i : s)
-        word[i]++;
-    vector<pair<char,int>> ans;
-    for (int i = 0, cnt = 0; i < N; i++)
-       if (word[i] && i!=' ') {
-           ans.push_back({i, word[i]});
-       } 
-    for (int i = 0; i < ans.size(); i++)
-        printf("%c--%d%c", ans[i].first, ans[i].second, " \n"[(i+1)%10==0||i==ans.size()-1]);
-//     for (int i = 0, cnt = 0; i < N; i++)
-//        if (word[i] && i!=' ') {
-//            cnt++;
-//            printf("%c--%d%c", i, word[i], " \n"[cnt%10==0]);
-//        }    
+    while(getline(cin,s))
+    {
+        memset(ans,0,sizeof(ans));
+        for(int i = 0;i<s.length();i++)
+        {
+            if(('A'<=s[i])&&(s[i]<='Z')||('a'<=s[i])&&(s[i]<='z'))
+            {
+                ans[s[i]].first = s[i],ans[s[i]].second++;
+                sign = s[i];//记录最后一个
+            }
+        }
+        for(int i = 0,cnt = 0;i<N;i++)
+        {
+            if(ans[i].second)
+            {
+                
+                if((cnt % 10) == 0)
+                {
+                    printf("%c--%d",ans[i].first,ans[i].second);
+                }
+                else{
+                    printf(" %c--%d",ans[i].first,ans[i].second);
+                }
+                if((cnt + 1) % 10 == 0||sign == i)//最后一个
+                {
+                    printf("\n");
+                }
+                cnt++;//记录 第几个输出
+            }
+        }
+    }
+    
     return 0;
 }
