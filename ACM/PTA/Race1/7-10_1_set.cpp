@@ -36,6 +36,11 @@ int main()
             s.insert(tem);
 		} 
 		peo0[i].suport = s.size();
+		for(set<int>::iterator it = s.begin();it !=s.end();it++)
+		{
+			printf("%d ",*it);
+		}
+		printf("\n");
 // 		 for(int j = 1;j<N;j++) //10^7 有点大  一时间只能10 ^ 8 运算
 // 		 {
 		 	 
