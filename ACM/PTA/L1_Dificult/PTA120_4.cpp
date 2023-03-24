@@ -54,14 +54,13 @@ int main()
 
     while (r >= l) //默认不是幸福数 才是特里独行
     {
-        while(num[r])
+        if(num[r])
         {
             r--;//如果是幸福数 那么下一个；
         }
         int sum = r; //处理r这个数字
         while (sum != 1)
         {
-            //130 2
             sum = get_change(sum);
             //先看这个数字是否出现过
             vector<int>::iterator it = find(adhere_Bles.begin(), adhere_Bles.end(), sum); //查看这个数字是否在之前出现过

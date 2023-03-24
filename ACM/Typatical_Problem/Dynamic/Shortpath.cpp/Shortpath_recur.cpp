@@ -40,10 +40,10 @@ int dfs(int v) //得到到这个点的最短距离
 void test0()
 {
 
-    cin >> vex >> edge;
-    cost = v1(vex, INF); //默认起始点到终点距离无穷大
-    path = v1(vex, -1);  //存储该顶点的上一个
-    G = vv1(vex, v1(vex));
+    cin >> vex >> edge;//点，   边
+    cost = vi(vex, INF); //默认起始点到终点距离无穷大
+    path = vi(vex, -1);  //存储该顶点的上一个
+    G = vv1(vex, vi(vex));
     cout << "请分别输入 两个顶点之间的权重" << endl;
     for (int i = 0, m, n, w; i < edge; i++)
     {
