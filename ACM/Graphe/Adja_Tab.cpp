@@ -35,16 +35,16 @@ void addEdge(int u,int v,int len)
 }
 void dfs(int id)//依据一个 起点  + 出边 的终点 遍历完图 是否可以
 {
-    printf("%d ",id);
-    if(Nodes->mark == 0)
+    
+    if(Nodes[id].mark == 0)//未处理
     {   
-        
-        Nodes[id].mark = 1;//遍历了
+        printf("%d ",id);
+        Nodes[id].mark = 1;// 处理了
         Edge* e = Nodes[id].first;//第一个出边
         while(e != NULL)
         {
-            dfs(e->u);//遍历 终点
-            e = e->next;
+            dfs(e->v);//遍历 终点
+            e = e->next;//下一条出边
         }
     }
 }
