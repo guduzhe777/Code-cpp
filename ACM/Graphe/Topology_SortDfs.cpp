@@ -32,7 +32,7 @@ void addEdge(int u, int v)
 }
 bool si = true; //是aov网
 stack<int> st;
-void dfs(int id)
+void dfs(int id)//:一直向下挖 直到终点，在挖的过程中 不能打结。
 {
     if (Nodes[id].mark == 1)
     {
@@ -72,19 +72,30 @@ int main()
         {
             Nodes[i].mark = 0; //默认全部未遍历
         }
-    }
-    printf("\n");
-    if (!si)
-    {
-        printf("G\n");
-    }
-    else
-    {
-        while (!st.empty())
+        if (!si)
         {
-            cout << st.top() << " ";
-            st.pop();
+            printf("G\n");
+        }
+        else
+        {
+            if (st.size() == n)
+            {
+                while (!st.empty()) //将n个点全部排序
+                {
+                    cout << st.top() << " ";
+                    st.pop();
+                }
+            }
+            else
+            {
+                while (!st.empty())
+                {
+                    st.pop();
+                }
+            }
         }
     }
+    printf("\n");
+
     return 0;
 }

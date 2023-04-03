@@ -8,7 +8,25 @@
 
 以边和点的出边关系 存储
 
-  
+  主要操作：
+
+探索周围所有点
+
+~~~
+Edge* e = npool[nu].first;
+
+while(e != NULL)
+{
+	if(npool[e->v].mark == 0)
+	{
+		//未被探索过
+		
+	}
+	e = e->next;
+}
+~~~
+
+
 
 ~~~
 struct Edge{ //边

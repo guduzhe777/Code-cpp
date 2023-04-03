@@ -79,13 +79,23 @@ int main()
             Nodes[j].mark = 0; //默认全部未遍历
         }
     }
-    if (si)
+    if(!si)
     {
-        printf("1");
+        printf("g\n");
+    }else{
+        while(!st.empty())
+        {
+            cout<<st.top()<<" ";
+            st.pop();
+        }
     }
-    else
-    {
-        printf("0");
-    }
+    // if (si)
+    // {
+    //     printf("1");
+    // }
+    // else
+    // {
+    //     printf("0");
+    // }
     return 0;
 }
