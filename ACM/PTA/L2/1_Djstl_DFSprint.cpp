@@ -83,7 +83,7 @@ int main()
     }
     pre[s] = -1;
     Djstl(s);    
-    dfs(d);
-    printf("\n%d %d",dis[d],worth[d]);
+    //dfs(d);
+    printf("%d %d\n",dis[d],worth[d]);
     return 0;
 }
