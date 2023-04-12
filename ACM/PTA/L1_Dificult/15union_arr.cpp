@@ -58,7 +58,7 @@ int main()
         }
         if(j == i)//如果前面没有i
         {
-            printf(" %d",c[i]);//
+            printf(" %d",c[i]);//   
         }
     }
     return 0;
