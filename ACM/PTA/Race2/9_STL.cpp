@@ -16,6 +16,7 @@ int main()
         heap.push_back(x);
         push_heap(heap.begin(),heap.end(),greater<int>());
     }
+    
     for(int i = 0;i<n;i++)
     {//堆的编号虽然从0开始  but 对应map的时候从1开始 等于对 堆重新编号。
     //利于求儿子父亲
