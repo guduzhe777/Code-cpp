@@ -3,7 +3,7 @@
 //不过是由 做题次数 做题罚时 最后是下标
 //先看能做多少题，把做多少题 对应罚时 都存储
 //另外 做到这一题需要多少时间 t
-//做完这道题 一共多少罚时 fine += t 
+//做完这道题 一共多少罚时 fine += t  fine : i - 1一共罚时 + t: 做完这道题罚时
 #include<bits/stdc++.h>
 #define  int long long
 using namespace std;
