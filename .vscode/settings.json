@@ -1,5 +1,8 @@
 {
     "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "*.tcc": "cpp",
@@ -55,13 +58,10 @@
         "future": "cpp",
         "initializer_list": "cpp",
         "iomanip": "cpp",
-        "iosfwd": "cpp",
-        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "mutex": "cpp",
         "new": "cpp",
-        "ostream": "cpp",
         "scoped_allocator": "cpp",
         "shared_mutex": "cpp",
         "sstream": "cpp",
