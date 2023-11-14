@@ -20,7 +20,7 @@ void matrixChain(vector<int> &p,int n, vector<vector<int>> &value,vector<vector<
             value[i][j] = value[i][i] + value[i+1][j] + p[i-1]*p[i]*p[j];
             index[i][j] = i;
             for(int k = i + 1;k<j;k++)
-            {   //前行 后列 中间列
+            {   //前行 后列 中间列1
             // p[i]: 第i个矩阵的列  i-1矩阵的行
                 // int v = value[i][k] + value[k+1][j] + p[i]* p[k] * p[j];
                 int v = value[i][k] + value[k+1][j] + p[i-1]* p[k] * p[j];
